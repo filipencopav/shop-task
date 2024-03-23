@@ -137,7 +137,18 @@ func main() {
 			fmt.Printf("%s (id=%d)\n",
 				order.commodity_title,
 				order.commodity_id)
-			fmt.Printf("заказ %d, %d шт\n\n", order.order_id, order.count)
+			fmt.Printf("заказ %d, %d шт\n", order.order_id, order.count)
+			if len(order.additional_shelves) > 0 {
+				fmt.Printf("доп стеллаж: ")
+				for i, s := range order.additional_shelves {
+					if i > 0 {
+						fmt.Printf(",")
+					}
+					fmt.Printf("%s", s)
+				}
+				fmt.Printf("\n")
+			}
+			fmt.Printf("\n")
 		}
 	}
 }
