@@ -1,0 +1,7 @@
+* Solution in Common Lisp
+1. Install make, sbcl
+2. Install [[https://www.quicklisp.org/beta/][quicklisp]]
+3. Run =make build=
+4. Run =fetch-orders 10,11,14,15=
+
+Solution might not be very well optimized, since it's using lists. However, it can be easily optimized with just a few edits. Most of the solution is printing logic, which is notable compared to all the contentless lines of the Go version.
